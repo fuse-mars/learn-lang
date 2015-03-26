@@ -1,0 +1,73 @@
+<!-- simple-todos.html -->
+<head>
+  <title>Compare - Language</title>
+</head>
+
+<body>
+  <div class="container">
+            <div class="lang-header">           
+                <div class="language-1">
+
+                    <h1>Sentence 1</h1>
+                    <!-- add a form below the h1 -->
+                    <form class="new-task">
+                        <input type="text" name="text" placeholder="Type to add new Sentence" />
+                    </form>
+                </div>     
+                <div class="language-2">
+
+                    <h1>Sentence 2</h1>
+                    <!-- add a form below the h1 -->
+                    <form class="new-task">
+                        <input type="text" name="text" placeholder="Type to add new Sentence" />
+                    </form>
+                </div>
+
+                <div class="language-3">
+
+                    <h1>Sentence 3</h1>
+                    <!-- add a form below the h1 -->
+                    <form class="new-task">
+                        <input type="text" name="text" placeholder="Type to add new Sentence" />
+                    </form>
+                </div>
+                <div class="language-4">
+
+                    <h1>Sentence 4</h1>
+                    <!-- add a form below the h1 -->
+                    <form class="new-task">
+                        <input type="text" name="text" placeholder="Type to add new Sentence" />
+                    </form>
+                </div>
+                <div class="language-5">
+
+                    <h1>Sentence 5</h1>
+                    <!-- add a form below the h1 -->
+                    <form class="new-task">
+                        <input type="text" name="text" placeholder="Type to add new Sentence" />
+                    </form>
+                </div>
+            </div>
+
+    <div class="lang-slider"> 
+      {{#each languagePacks}}
+        {{> languagePack}}
+      {{/each}}
+    </div>
+  </div>
+</body>
+
+<template name="languagePack">
+  <div >
+    <ul>
+      {{#each learningResponses}}
+        {{> learningPiece}}
+      {{/each}}
+    </ul>
+    <!-- TODO here we will have an input box -->
+  </div>
+</template>
+
+<template name="learningPiece">
+  <li>{{response}}</li>
+</template>
